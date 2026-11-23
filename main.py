@@ -8,7 +8,7 @@ client = OpenAI(
 
 def sammy_ai(message):
     response = client.responses.create(
-        model=["OPENAI_MODEL"],
+        model=os.environ["OPENAI_MODEL"],
         instructions="""
         Your name is Sammy AI.
 
